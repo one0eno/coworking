@@ -18,6 +18,8 @@ namespace Coworking.Api
         {
             var dd = "esto es master";
             var kk = " esto es lo quee arregla la issue1";
+            var kk2 = " linea de issue2";
+            var kk2 = " linea de issue2 segundo commit";
             CreateHostBuilder(args).Build().Run();
         }
 
