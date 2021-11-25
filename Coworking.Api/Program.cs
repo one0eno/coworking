@@ -16,7 +16,7 @@ namespace Coworking.Api
         //esto es una prueba
         public static void Main(string[] args)
         {
-          
+            var dd = "esto es master";
             CreateHostBuilder(args).Build().Run();
         }
 
