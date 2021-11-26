@@ -35,6 +35,7 @@ namespace Coworking.Api.DataAcces
 
             AdminEntityConfig.SetEntityBuilder(modelBuilder.Entity<AdminEntity>());
             UserEntityConfig.SetEntityBuilder(modelBuilder.Entity<UserEntity>());
+            
             BookEntityConfig.SetEntityBuilder(modelBuilder.Entity<BookingEntity>());
             OfficeEntityConfig.SetEntityBuilder(modelBuilder.Entity<OfficeEntity>());
             Office2RoomEntityConfig.SetEntityBuilder(modelBuilder.Entity<Offices2RoomEntity>());

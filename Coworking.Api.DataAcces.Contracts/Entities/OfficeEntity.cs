@@ -14,14 +14,14 @@ namespace Coworking.Api.DataAcces.Contracts.Entities
         public string Address { get; set; }
         public string Phone { get; set; }
         public string City { get; set; }
-        public string IAdmin { get; set; }
+        public string IdAdmin { get; set; }
         public bool HasIndividualWorkSpace{ get; set; }
         public int NumberWorkSpaces { get; set; }
         public decimal PriceWorkSpaceDaily { get; set; }
         public decimal PriceWorkSpaceMonthly { get; set; }
 
 
-        public virtual AdminEntity Admin { get; set; }
+        //public virtual AdminEntity Admin { get; set; }
         public virtual ICollection<Offices2RoomEntity> Office2Room { get; set; }
 
         public virtual BookingEntity Booking { get; set; }

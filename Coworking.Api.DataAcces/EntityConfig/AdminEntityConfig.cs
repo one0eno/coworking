@@ -20,7 +20,7 @@ namespace Coworking.Api.DataAcces.EntityConfig
             entityBuilder.Property(x => x.Id).IsRequired();
 
             //Estamos diciendo que una oficina tiene realcion con un Admin
-            entityBuilder.HasOne(x => x.Office).WithOne(x => x.Admin);
+            //entityBuilder.HasOne(x => x.Office).WithOne(x => x.Admin);
 
         }
 
