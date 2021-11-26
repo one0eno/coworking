@@ -16,5 +16,7 @@ namespace Coworking.Api.DataAcces.Contracts.Entities
         public bool Active { get; set; }
 
         public DateTime CreateDate { get; set; }
+
+        public virtual BookingEntity Booking { get; set; }
     }
 }

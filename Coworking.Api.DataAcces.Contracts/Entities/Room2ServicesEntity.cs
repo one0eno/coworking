@@ -13,5 +13,6 @@ namespace Coworking.Api.DataAcces.Contracts.Entities
 
         public virtual RoomEntity Room { get; set; }
         public virtual ServicesEntity Service { get; set; }
+
     }
 }

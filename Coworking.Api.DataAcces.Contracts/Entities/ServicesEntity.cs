@@ -15,6 +15,6 @@ namespace Coworking.Api.DataAcces.Contracts.Entities
 
         public decimal Price { get; set; }
 
-        public virtual ICollection<Room2ServicesEntity> Room { get; set; }
+        public virtual ICollection<Room2ServicesEntity> Room2Service { get; set; }
     }
 }

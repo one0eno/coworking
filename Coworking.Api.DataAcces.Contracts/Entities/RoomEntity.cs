@@ -14,7 +14,7 @@ namespace Coworking.Api.DataAcces.Contracts.Entities
         public int Capacity { get; set; }
 
         public virtual ICollection<Offices2RoomEntity> Office2Room { get; set; }
-        public virtual ICollection<Room2ServicesEntity> Room { get; set; }
+        public virtual ICollection<Room2ServicesEntity> Room2Service { get; set; }
 
     }
 }

@@ -24,5 +24,7 @@ namespace Coworking.Api.DataAcces.Contracts.Entities
         public virtual AdminEntity Admin { get; set; }
         public virtual ICollection<Offices2RoomEntity> Office2Room { get; set; }
 
+        public virtual BookingEntity Booking { get; set; }
+
     }
 }
