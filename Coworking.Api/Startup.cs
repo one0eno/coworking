@@ -1,5 +1,10 @@
+using Coworking.Api.Aplication.Services;
+using Coworking.Api.Application.Contracts.Services;
 using Coworking.Api.CrossCuting.Register;
 using Coworking.Api.DataAcces;
+using Coworking.Api.DataAcces.Contracts;
+using Coworking.Api.DataAcces.Contracts.Repositories;
+using Coworking.Api.DataAcces.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -30,10 +35,15 @@ namespace Coworking.Api
         public void ConfigureServices(IServiceCollection services)
         {
 
+
+
+            services.AddScoped<ICoworkingDBContext, CoworkingDBContext>();
+
             services.AddDbContext<CoworkingDBContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DataBaseConnection")));
+
             IoCRegister.AddRegistration(services);
 
-
+            
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
