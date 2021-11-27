@@ -1,4 +1,6 @@
-﻿using Coworking.Api.DataAcces.Contracts.Repositories;
+﻿using Coworking.Api.Aplication.Services;
+using Coworking.Api.Application.Contracts.Services;
+using Coworking.Api.DataAcces.Contracts.Repositories;
 using Coworking.Api.DataAcces.Repositories;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -19,8 +21,8 @@ namespace Coworking.Api.CrossCuting.Register
 
         public static IServiceCollection AddRegsiterServices(IServiceCollection services) {
 
-            services.AddTransient<IAdminRepository, AdminRepository>();
-
+            services.AddTransient<IAdminService, AdminService>();
+            services.AddTransient<IUserService, UserService>();
             return services;
 
         }

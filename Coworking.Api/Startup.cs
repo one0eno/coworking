@@ -1,3 +1,4 @@
+using Coworking.Api.CrossCuting.Register;
 using Coworking.Api.DataAcces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -30,6 +31,9 @@ namespace Coworking.Api
         {
 
             services.AddDbContext<CoworkingDBContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DataBaseConnection")));
+            IoCRegister.AddRegistration(services);
+
+
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

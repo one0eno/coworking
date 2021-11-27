@@ -73,10 +73,7 @@ namespace Coworking.Api.DataAcces.Repositories
 
         public async Task<IEnumerable<AdminEntity>> GetAll()
         {
-            throw new NotImplementedException();
+            return _coworkingDbContext.Admins.Select(x => x) ;
         }
-
-
-       
     }
 }
