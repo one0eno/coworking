@@ -13,6 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Coworking.Api.CrossCuting\Coworking.Api.CrossCuting.csproj" />
     <ProjectReference Include="..\Coworking.Api.DataAcces\Coworking.Api.DataAcces.csproj" />
   </ItemGroup>
 
