@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -36,5 +37,23 @@ namespace Coworking.Api.Config
 
             return services;
         }
+
+        /// <summary>
+        /// Activación de applicationBuilder
+        /// </summary>
+        /// <param name="services"></param>
+        /// <returns></returns>
+        public static IApplicationBuilder AddRegistration(this IApplicationBuilder app)
+        {
+            app.UseSwagger();
+
+            //Indicamos donde esta el JSON del endpoint
+            app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Coworking API V1"));
+
+            return app;
+
+        }
+
+
     }
 }

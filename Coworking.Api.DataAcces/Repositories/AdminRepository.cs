@@ -49,7 +49,7 @@ namespace Coworking.Api.DataAcces.Repositories
         {
             ///var entity = _coworkingDbContext.Admins.FirstOrDefaultAsync(o => o.Id == idEntity);
             var entity =await _coworkingDbContext.Admins
-                            .Include(i => i.Office)
+                            //.Include(i => i.Office)
                             //.ThenInclude(i => i.Office2Room)
                             .FirstOrDefaultAsync(o => o.Id == idEntity);
 

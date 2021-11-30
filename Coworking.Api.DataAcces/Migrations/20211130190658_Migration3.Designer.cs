@@ -4,14 +4,16 @@ using Coworking.Api.DataAcces;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Coworking.Api.DataAcces.Migrations
 {
     [DbContext(typeof(CoworkingDBContext))]
-    partial class CoworkingDBContextModelSnapshot : ModelSnapshot
+    [Migration("20211130190658_Migration3")]
+    partial class Migration3
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

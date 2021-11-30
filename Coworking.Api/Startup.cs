@@ -41,9 +41,11 @@ namespace Coworking.Api
 
             services.AddDbContext<CoworkingDBContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DataBaseConnection")));
 
+           
             IoCRegister.AddRegistration(services);
+            Coworking.Api.Config.SwaggerConfig.AddRegistration(services);
 
-            
+
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
@@ -60,6 +62,7 @@ namespace Coworking.Api
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Coworking.Api v1"));
             }
+            Coworking.Api.Config.SwaggerConfig.AddRegistration(app);
 
             app.UseHttpsRedirection();
 

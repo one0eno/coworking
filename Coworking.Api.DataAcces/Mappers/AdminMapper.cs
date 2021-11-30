@@ -17,7 +17,7 @@ namespace Coworking.Api.DataAcces.Mappers
                 Email   = dto.Email,
                 Id      = dto.Id,
                 Name    = dto.Name,
-                OfficeId= dto.OfficeId,
+                //OfficeId= dto.OfficeId,
                 Phone   = dto.Phone
             };
         }
@@ -30,7 +30,7 @@ namespace Coworking.Api.DataAcces.Mappers
                 Email = dto.Email,
                 Id = dto.Id,
                 Name = dto.Name,
-                OfficeId = dto.OfficeId,
+               // OfficeId = dto.OfficeId,
                 Phone = dto.Phone
             };
         }

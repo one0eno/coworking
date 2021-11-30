@@ -11,5 +11,26 @@
             <param name="services"></param>
             <returns></returns>
         </member>
+        <member name="M:Coworking.Api.Config.SwaggerConfig.AddRegistration(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            Activación de applicationBuilder
+            </summary>
+            <param name="services"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Coworking.Api.Controllers.AdminController.Get(System.Int32)">
+            <summary>
+            Recupera el nombre del administrador
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Coworking.Api.Controllers.AdminController.AddAdmin(Coworking.Api.ViewModels.AdminModel)">
+            <summary>
+            Genera un nuevo administrador
+            </summary>
+            <param name="admin">Objeto admin</param>
+            <returns></returns>
+        </member>
     </members>
 </doc>
