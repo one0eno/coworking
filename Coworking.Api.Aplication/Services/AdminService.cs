@@ -16,19 +16,40 @@ namespace Coworking.Api.Aplication.Services
         public AdminService(IAdminRepository adminRepository) {
 
             _adminRepository = adminRepository;
-
             
         }
 
-        public async Task<string> GetAdminName(int id) {
+
+        public async Task<IEnumerable<Admin>> GetAllAdmins()
+        {
+            var admins = await  _adminRepository.GetAll();
+            return admins.Select(AdminMapper.Map);
+        }
+
+        public async Task<Admin> GetAdmin(int id) {
 
             var entidad = await _adminRepository.Get(id);
-            return entidad.Name;
+            return AdminMapper.Map(entidad) ;
         }
 
         public async Task<Admin> AddAdmin(Admin admin) {
 
             var addedEntity = await _adminRepository.Add(AdminMapper.Map(admin));
+            return AdminMapper.Map(addedEntity);
+        }
+
+        
+        public async Task<int> DeleteAdmin(int id)
+        {
+
+            var addedEntity = await _adminRepository.DeleteAsync(id);
+            return id;
+        }
+
+        public async Task<Admin> UpdateAdmin(Admin admin)
+        {
+
+            var addedEntity = await _adminRepository.Update(AdminMapper.Map(admin));
             return AdminMapper.Map(addedEntity);
         }
     }

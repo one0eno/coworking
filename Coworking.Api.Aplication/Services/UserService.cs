@@ -22,7 +22,7 @@ namespace Coworking.Api.Aplication.Services
         {
             var user = await _userRepository.Get(idUser);
 
-            var adminName  = await _adminService.GetAdminName(idAdmin);
+            //var adminName  = await _adminService.GetAdminName(idAdmin);
 
             
             

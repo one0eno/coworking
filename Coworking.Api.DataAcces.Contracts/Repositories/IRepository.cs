@@ -12,7 +12,7 @@ namespace Coworking.Api.DataAcces.Contracts.Repositories
         Task<IEnumerable<T>> GetAll();
         Task<T> Get(int id);
         Task<T> DeleteAsync(int id);
-        Task<T> Update(int id, T element);
+        Task<T> Update(T element);
         Task<T> Add(T element);
     }
 }

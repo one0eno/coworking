@@ -29,10 +29,23 @@ namespace Coworking.Api.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> Get(int id)
         {
-            var name = await _adminService.GetAdminName(id);
-            if (name == null) 
+
+            var admin = await _adminService.GetAdmin(id);
+         
+            if (admin == null) 
                 return NotFound();
-            return Ok(name);
+            return Ok(admin);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Get()
+        {
+
+            var admins = await _adminService.GetAllAdmins();
+
+            if (admins == null)
+                return NotFound();
+            return Ok(admins);
         }
 
         /// <summary>
@@ -48,6 +61,23 @@ namespace Coworking.Api.Controllers
             if (name == null)
                 return NotFound();
             return Ok(name);
+        }
+
+        [Produces("application/json", Type = typeof(AdminModel))]
+        [HttpPut]
+        public async Task<IActionResult> UpdateAdmin([FromBody] AdminModel admin)
+        {
+            var name = await _adminService.UpdateAdmin(AdminMapper.Map(admin));
+            if (name == null)
+                return NotFound();
+            return Ok(name);
+        }
+
+        [HttpDelete]
+        public async Task<IActionResult> DeleteAdmin(int  id)
+        {
+            await _adminService.DeleteAdmin(id);
+            return Ok();
         }
     }
 }
