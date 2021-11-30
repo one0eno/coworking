@@ -19,10 +19,12 @@ namespace Coworking.Api.Controllers
             _adminService = adminService;
         }
 
-        [HttpGet]
+        [HttpGet("{id}")]
         public async Task<IActionResult> Get(int id)
         {
             var name = await _adminService.GetAdminName(id);
+            if (name == null) 
+                return NotFound();
             return Ok(name);
         }
     }

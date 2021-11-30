@@ -15,7 +15,9 @@ namespace Coworking.Api.CrossCuting.Register
     {
         public static IServiceCollection AddRegistration(this IServiceCollection services) {
 
-            return AddRegsiterRepositories(services);
+            AddRegsiterServices(services);
+            AddRegsiterRepositories(services);
+            return services;
            
         }
 
@@ -23,6 +25,7 @@ namespace Coworking.Api.CrossCuting.Register
 
             services.AddTransient<IAdminService, AdminService>();
             services.AddTransient<IUserService, UserService>();
+
             return services;
 
         }

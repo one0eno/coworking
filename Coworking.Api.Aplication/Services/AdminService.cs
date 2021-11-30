@@ -26,10 +26,10 @@ namespace Coworking.Api.Aplication.Services
             return entidad.Name;
         }
 
-        //public async Task<Admin> AddAdmin(Admin admin) {
+        public async Task<Admin> AddAdmin(Admin admin) {
 
-        //    var addedEntity = await _adminRepository.Add(AdminMapper.Map(admin));
-        //    return AdminMapper.Map(addedEntity);
-        //}
+            var addedEntity = await _adminRepository.Add(AdminMapper.Map(admin));
+            return AdminMapper.Map(addedEntity);
+        }
     }
 }
