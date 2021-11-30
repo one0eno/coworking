@@ -28,7 +28,7 @@ namespace Coworking.Api.Config
             services.AddSwaggerGen(c =>
                 {
                     c.SwaggerDoc("V1", info);
-                    c.IncludeXmlComments(filePaht);
+                    c.IncludeXmlComments(xmlPath);
 
                 }
 

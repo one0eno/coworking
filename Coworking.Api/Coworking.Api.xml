@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Coworking.Api</name>
+    </assembly>
+    <members>
+        <member name="M:Coworking.Api.Config.SwaggerConfig.AddRegistration(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Configuracion de swagger
+            </summary>
+            <param name="services"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
